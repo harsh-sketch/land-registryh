@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    background-size: 400% 400%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: backgroundAnimation 8s infinite alternate ease-in-out;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 50% 100%; }
+    100% { background-position: 100% 50%; }
+}
+
+.container {
+    background: linear-gradient(135deg, #ffffff, #dfe6e9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    animation: popUp 1s ease-in-out, glow 2s infinite alternate;
+    max-width: 90%;
+    overflow-y: auto;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 20px rgba(255, 105, 180, 0.5); }
+    to { box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); }
+}
+
+h1 {
+    color: #2d3436;
+    animation: textColorChange 3s infinite alternate, slideIn 1s ease-in-out;
+}
+
+@keyframes textColorChange {
+    0% { color: #e17055; }
+    50% { color: #fd79a8; }
+    100% { color: #6c5ce7; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.form-container {
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+input {
+    padding: 12px;
+    margin: 10px 0;
+    width: 80%;
+    border: 2px solid #6c5ce7;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    transform: scale(1.1);
+    outline: none;
+    box-shadow: 0 0 15px #6c5ce7;
+}
+
+button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#ownerAddress {
+    margin-top: 20px;
+    font-weight: bold;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Enable scrolling */
+html, body {
+    overflow-y: auto;
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    padding: 12px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Pop-up Notification Styling */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+    animation: fadeIn 0.5s, fadeOut 0.5s 3.5s, scaleInOut 3s infinite alternate;
+}
+
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.home-btn {
+    background-color: #28a745;
+}
+
+.home-btn:hover {
+    background-color: #218838;
+}
+.account-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.account-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.account-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+/* Site Header */
+.site-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+          
+
+.popup.success { background: linear-gradient(135deg, #1dd1a1, #10ac84); }
+.popup.error { background: linear-gradient(135deg, #ff6b6b, #ee5253); }
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 4s ease-in-out;
+}
+
+.popup.success {
+    background-color: green;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+}
+
+@keyframes scaleInOut {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}

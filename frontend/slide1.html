@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Land</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.5/web3.min.js"></script>
+    <script src="slide1.js" defer></script>
+    <script src="metamask.js" defer></script>
+
+</head>
+<body>
+    <header class="site-header">
+        <h1>The Land Registry System</h1>
+    </header>
+    
+    <div class="account-info">
+        <img id="profilePic" src="default-avatar.png" alt="Profile Picture">
+        <div>
+            <p id="accountName">Account: Loading...</p>
+            <p id="accountNumber">Address: Loading...</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Register Land</h1>
+        <div class="form-container">
+            <input type="text" id="landLocation" placeholder="Enter Location">
+            <input type="number" id="landAcreage" placeholder="Enter Acreage">
+            <input type="number" id="landPrice" placeholder="Enter Price">
+            <button onclick="registerLand()">Register</button>
+        </div>
+        <div class="nav-buttons">
+            <a href="index.html" class="btn home-btn">Home</a>
+            <a href="slide2.html" class="btn">Check Land Owner</a>
+        </div>
+    </div>
+</body>
+</html>
